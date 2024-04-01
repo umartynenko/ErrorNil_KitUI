@@ -13,8 +13,6 @@ class ViewController: UIViewController {
 
     lazy var headerImage: UIImageView = {
         $0.image = UIImage(named: "89355b8ad2b6c7e4c6d18da47f89dc3f")
-//        $0.contentMode = .scaleAspectFill
-//        $0.clipsToBounds = true
         
         return $0
     }(UIImageView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: 430, height: 156))))
@@ -25,9 +23,6 @@ class ViewController: UIViewController {
         $0.clipsToBounds = true
         $0.layer.cornerRadius = 50
 
-//        $0.contentMode = .scaleAspectFill
-//        $0.clipsToBounds = true
-        
         return $0
     }(UIImageView(frame: CGRect(origin: CGPoint(x: 30, y: 189), size: CGSize(width: 100, height: 100))))
     
@@ -40,7 +35,6 @@ class ViewController: UIViewController {
         $0.layer.borderColor = UIColor.systemBlue.cgColor
         $0.font = UIFont.systemFont(ofSize: 16)
         $0.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-        
         
         return $0
     }(UITextView(frame: CGRect(x: 30, y: 369, width: view.frame.width - 60, height: 150)))
@@ -82,8 +76,6 @@ class ViewController: UIViewController {
     )
 
     override func viewDidLoad() {
-        
-        print(view.frame.height)
         super.viewDidLoad()
         
         [
@@ -100,7 +92,6 @@ class ViewController: UIViewController {
         ].forEach {
             view.addSubview($0)
         }
-    
     }
     
     private func createLabel(frame: CGRect, text: String) -> UILabel {
@@ -119,7 +110,6 @@ class ViewController: UIViewController {
         button.backgroundColor = backgroundColor
         button.layer.cornerRadius = corner
         button.titleLabel?.font = .systemFont(ofSize: 14)
-        
         
         return button
     }
@@ -141,7 +131,6 @@ class ViewController: UIViewController {
         textField.isSecureTextEntry = isSecureText
         textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 1))
         textField.leftViewMode = .always
-        
         
         return textField
     }
