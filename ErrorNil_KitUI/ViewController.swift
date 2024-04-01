@@ -161,7 +161,7 @@ class ViewController: UIViewController {
     private func createButton(title: String, backgroun: UIColor, frame: CGRect, corner: CGFloat = 0) -> UIButton{
         let button = UIButton()
         
-        button.setTitle("Добавить данные", for: .normal)
+        button.setTitle(title, for: .normal)
         button.backgroundColor = backgroun
         button.frame = frame
         button.layer.cornerRadius = corner
