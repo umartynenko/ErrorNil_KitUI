@@ -9,6 +9,10 @@ import UIKit
 
 class AboutUserViewController: UIViewController {
     
+    
+    var about: String = ""
+    var fullName: String = ""
+    
     lazy var userAvatarImage = AppElements.avatarImage(
         imageName: "a339940abd3883404a496de92e27fbd0",
         scale: .scaleAspectFill,
@@ -18,16 +22,14 @@ class AboutUserViewController: UIViewController {
         centerX: view.center.x,
         corner: 20
     )
-    
     lazy var userNameLabel = AppElements.createLabel(
-        text: "Имя Фамилия",
+        text: fullName,
         textAligmet: .center,
         position: CGPoint(x: 30, y: userAvatarImage.frame.maxY + 23),
         size: CGSize(width: view.frame.width - 60, height: 19),
         fontSize: 16,
         fontColot: .black
     )
-    
     lazy var aboutLabel = AppElements.createLabel(
         text: "О себе",
         textAligmet: .left,
@@ -36,14 +38,8 @@ class AboutUserViewController: UIViewController {
         fontSize: 16,
         fontColot: .appGrayAbout
     )
-    
-    //    lazy var aboutTextField = AppElements.createTextField(color: .appGray, corner: 15, size: CGSize(width: view.frame.width - 60, height: 158), position: CGPoint(x: 30, y: aboutLabel.frame.maxY + 9))
-    
     lazy var aboutTextView: UITextView = {
-        $0.text = """
-        During the next launch cycle, the view attempts to restore these properties to their saved values. If the selection range can’t be applied to the text in the restored view, no text is selected. For more information about how state preservation and restoration works, see App Programming Guide for iOS.
-        During the next launch cycle, the view attempts to restore these properties to their saved values. If the selection range can’t be applied to the text in the restored view, no text is selected. For more information about how state preservation and restoration works, see App Programming Guide for iOS.
-"""
+        $0.text = about
         $0.font = .systemFont(ofSize: 15)
         $0.backgroundColor = .appGray
         $0.layer.cornerRadius = 15
@@ -51,14 +47,13 @@ class AboutUserViewController: UIViewController {
         $0.frame.origin = CGPoint(x: 30, y: aboutLabel.frame.maxY + 9)
         $0.showsVerticalScrollIndicator = true
         
-        
         return $0
     }(UITextView())
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Имя Фамилия"
+        title = fullName
         view.backgroundColor = .white
         
         [userAvatarImage, userNameLabel, aboutLabel, aboutTextView].forEach {view.addSubview($0)}

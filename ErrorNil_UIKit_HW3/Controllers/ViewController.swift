@@ -9,11 +9,13 @@ import UIKit
 
 
 protocol ViewControllerDelegate: AnyObject {
-    func setFullName(firstName: String, lastName: String)
+    func setFullName(firstName: String, lastName: String, about: String)
 }
 
 
 class ViewController: UIViewController {
+    
+    var aboutText = ""
     
     lazy var userUIView: UIView = {
         $0.frame.size = CGSize(width: view.frame.width - 60, height: 110)
@@ -24,7 +26,6 @@ class ViewController: UIViewController {
 
         return $0
     }(UIView())
-    
     lazy var userAvatarImage = AppElements.avatarImage(
         imageName: "a339940abd3883404a496de92e27fbd0",
         scale: .scaleAspectFill,
@@ -33,7 +34,6 @@ class ViewController: UIViewController {
         position: CGPoint(x: 17, y: 17),
         corner: 20
     )
-    
     lazy var userNameLabel = AppElements.createLabel(
         text: "Имя Фамилия",
         textAligmet: .left,
@@ -42,7 +42,6 @@ class ViewController: UIViewController {
         fontSize: 16,
         fontColot: .black
     )
-    
     lazy var arrowButton: UIButton = {
         $0.frame.size = CGSize(width: 17, height: 17)
         $0.frame.origin = CGPoint(x: userUIView.frame.maxX - 68, y: userAvatarImage.frame.height - 32)
@@ -51,10 +50,11 @@ class ViewController: UIViewController {
         
         return $0
     }(UIButton(primaryAction: UIAction {[weak self] _ in
-        let settingsVC = AboutUserViewController()
-        self?.navigationController?.pushViewController(settingsVC, animated: true)
+        let aboutVC = AboutUserViewController()
+        aboutVC.fullName = self?.userNameLabel.text ?? ""
+        aboutVC.about = self?.aboutText ?? ""
+        self?.navigationController?.pushViewController(aboutVC, animated: true)
     }))
-    
     lazy var editButton = AppElements.createButton(
         title: "Редактировать",
         fontSize: 14,
@@ -68,6 +68,7 @@ class ViewController: UIViewController {
         buttonPosition: CGPoint(x: userAvatarImage.frame.maxX + 12, y: userNameLabel.frame.maxY + 7),
         btnAction: UIAction {[weak self] _ in
             let settingsVC = SettingsViewController()
+            settingsVC.delegate = self
             self?.navigationController?.pushViewController(settingsVC, animated: true)
         }
     )
@@ -86,8 +87,9 @@ class ViewController: UIViewController {
 
 
 extension ViewController: ViewControllerDelegate {
-    func setFullName(firstName: String, lastName: String) {
+    func setFullName(firstName: String, lastName: String, about: String) {
         self.userNameLabel.text = firstName + " " + lastName
+        aboutText = about
     }
 }
 

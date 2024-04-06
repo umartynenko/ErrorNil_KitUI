@@ -66,7 +66,6 @@ class AppElements {
             $0.rightView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 1))
             $0.rightViewMode = .always
             
-            
             return $0
         }(UITextField())
     }
