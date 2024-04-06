@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     let surname = "Мартыненко"
     let streamNumber = "iOS 7"
     let buttonAddData = UIButton()
-    let buttonClearData = UIButton()
+//    let buttonClearData = UIButton()
     
     override func loadView() {
         super.loadView()
