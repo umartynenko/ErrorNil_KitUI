@@ -95,7 +95,14 @@ class AppElements {
         }(UIImageView())
     }
     
-    static func createLabel(text: String, textAligmet:  NSTextAlignment, position: CGPoint, size: CGSize, fontSize: CGFloat, fontColot: UIColor) -> UILabel {
+    static func createLabel(
+        text: String,
+        textAligmet:  NSTextAlignment,
+        position: CGPoint,
+        size: CGSize,
+        fontSize: CGFloat,
+        fontColot: UIColor
+    ) -> UILabel {
         {
             $0.text = text
             $0.frame.origin = position
