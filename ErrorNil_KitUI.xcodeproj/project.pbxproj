@@ -19,6 +19,12 @@
 		F85AD0852BBF2A12004CAB70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F85AD0842BBF2A12004CAB70 /* Assets.xcassets */; };
 		F85AD0882BBF2A12004CAB70 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = F85AD0872BBF2A12004CAB70 /* Base */; };
 		F85AD0952BBFBCF8004CAB70 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85AD0942BBFBCF8004CAB70 /* SettingsViewController.swift */; };
+		F88248312BC2CB8300CCFCE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88248302BC2CB8300CCFCE9 /* AppDelegate.swift */; };
+		F88248332BC2CB8300CCFCE9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88248322BC2CB8300CCFCE9 /* SceneDelegate.swift */; };
+		F88248352BC2CB8300CCFCE9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88248342BC2CB8300CCFCE9 /* ViewController.swift */; };
+		F882483A2BC2CB8400CCFCE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F88248392BC2CB8400CCFCE9 /* Assets.xcassets */; };
+		F882483D2BC2CB8400CCFCE9 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = F882483C2BC2CB8400CCFCE9 /* Base */; };
+		F88248442BC2CFB400CCFCE9 /* AppElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88248432BC2CFB400CCFCE9 /* AppElements.swift */; };
 		F8CE8D6B2BB4A7F50024E253 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CE8D6A2BB4A7F50024E253 /* AppDelegate.swift */; };
 		F8CE8D6D2BB4A7F50024E253 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CE8D6C2BB4A7F50024E253 /* SceneDelegate.swift */; };
 		F8CE8D6F2BB4A7F50024E253 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CE8D6E2BB4A7F50024E253 /* ViewController.swift */; };
@@ -46,6 +52,14 @@
 		F85AD0872BBF2A12004CAB70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F85AD0892BBF2A12004CAB70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F85AD0942BBFBCF8004CAB70 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		F882482E2BC2CB8300CCFCE9 /* ErrorNil_UIKit_HW4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ErrorNil_UIKit_HW4.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F88248302BC2CB8300CCFCE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F88248322BC2CB8300CCFCE9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F88248342BC2CB8300CCFCE9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F88248392BC2CB8400CCFCE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F882483C2BC2CB8400CCFCE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F882483E2BC2CB8400CCFCE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F88248432BC2CFB400CCFCE9 /* AppElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppElements.swift; sourceTree = "<group>"; };
 		F8CE8D672BB4A7F50024E253 /* ErrorNil_KitUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ErrorNil_KitUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8CE8D6A2BB4A7F50024E253 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8CE8D6C2BB4A7F50024E253 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +81,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F85AD0762BBF2A11004CAB70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F882482B2BC2CB8300CCFCE9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -121,12 +142,27 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		F882482F2BC2CB8300CCFCE9 /* ErrorNil_UIKit_HW4 */ = {
+			isa = PBXGroup;
+			children = (
+				F88248302BC2CB8300CCFCE9 /* AppDelegate.swift */,
+				F88248322BC2CB8300CCFCE9 /* SceneDelegate.swift */,
+				F88248342BC2CB8300CCFCE9 /* ViewController.swift */,
+				F88248392BC2CB8400CCFCE9 /* Assets.xcassets */,
+				F882483B2BC2CB8400CCFCE9 /* LaunchScreen.storyboard */,
+				F882483E2BC2CB8400CCFCE9 /* Info.plist */,
+				F88248432BC2CFB400CCFCE9 /* AppElements.swift */,
+			);
+			path = ErrorNil_UIKit_HW4;
+			sourceTree = "<group>";
+		};
 		F8CE8D5E2BB4A7F50024E253 = {
 			isa = PBXGroup;
 			children = (
 				F8CE8D692BB4A7F50024E253 /* ErrorNil_KitUI */,
 				F83205DD2BBB29EB005DB3C3 /* ErrorNil_UIKit_HW_2 */,
 				F85AD07A2BBF2A11004CAB70 /* ErrorNil_UIKit_HW3 */,
+				F882482F2BC2CB8300CCFCE9 /* ErrorNil_UIKit_HW4 */,
 				F8CE8D682BB4A7F50024E253 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -137,6 +173,7 @@
 				F8CE8D672BB4A7F50024E253 /* ErrorNil_KitUI.app */,
 				F83205DC2BBB29EB005DB3C3 /* ErrorNil_UIKit_HW_2.app */,
 				F85AD0792BBF2A11004CAB70 /* ErrorNil_UIKit_HW3.app */,
+				F882482E2BC2CB8300CCFCE9 /* ErrorNil_UIKit_HW4.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -192,6 +229,23 @@
 			productReference = F85AD0792BBF2A11004CAB70 /* ErrorNil_UIKit_HW3.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F882482D2BC2CB8300CCFCE9 /* ErrorNil_UIKit_HW4 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F88248412BC2CB8400CCFCE9 /* Build configuration list for PBXNativeTarget "ErrorNil_UIKit_HW4" */;
+			buildPhases = (
+				F882482A2BC2CB8300CCFCE9 /* Sources */,
+				F882482B2BC2CB8300CCFCE9 /* Frameworks */,
+				F882482C2BC2CB8300CCFCE9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ErrorNil_UIKit_HW4;
+			productName = ErrorNil_UIKit_HW4;
+			productReference = F882482E2BC2CB8300CCFCE9 /* ErrorNil_UIKit_HW4.app */;
+			productType = "com.apple.product-type.application";
+		};
 		F8CE8D662BB4A7F50024E253 /* ErrorNil_KitUI */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F8CE8D7B2BB4A7F60024E253 /* Build configuration list for PBXNativeTarget "ErrorNil_KitUI" */;
@@ -225,6 +279,9 @@
 					F85AD0782BBF2A11004CAB70 = {
 						CreatedOnToolsVersion = 15.3;
 					};
+					F882482D2BC2CB8300CCFCE9 = {
+						CreatedOnToolsVersion = 15.3;
+					};
 					F8CE8D662BB4A7F50024E253 = {
 						CreatedOnToolsVersion = 15.3;
 					};
@@ -246,6 +303,7 @@
 				F8CE8D662BB4A7F50024E253 /* ErrorNil_KitUI */,
 				F83205DB2BBB29EB005DB3C3 /* ErrorNil_UIKit_HW_2 */,
 				F85AD0782BBF2A11004CAB70 /* ErrorNil_UIKit_HW3 */,
+				F882482D2BC2CB8300CCFCE9 /* ErrorNil_UIKit_HW4 */,
 			);
 		};
 /* End PBXProject section */
@@ -267,6 +325,15 @@
 			files = (
 				F85AD0852BBF2A12004CAB70 /* Assets.xcassets in Resources */,
 				F85AD0882BBF2A12004CAB70 /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F882482C2BC2CB8300CCFCE9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F882483A2BC2CB8400CCFCE9 /* Assets.xcassets in Resources */,
+				F882483D2BC2CB8400CCFCE9 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +373,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F882482A2BC2CB8300CCFCE9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F88248352BC2CB8300CCFCE9 /* ViewController.swift in Sources */,
+				F88248312BC2CB8300CCFCE9 /* AppDelegate.swift in Sources */,
+				F88248442BC2CFB400CCFCE9 /* AppElements.swift in Sources */,
+				F88248332BC2CB8300CCFCE9 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F8CE8D632BB4A7F50024E253 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -339,6 +417,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				F85AD0872BBF2A12004CAB70 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F882483B2BC2CB8400CCFCE9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F882483C2BC2CB8400CCFCE9 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -470,6 +556,60 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "home.ErrorNil-UIKit-HW3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F882483F2BC2CB8400CCFCE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 29H9G4D6F9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ErrorNil_UIKit_HW4/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "home.ErrorNil-UIKit-HW4";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F88248402BC2CB8400CCFCE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 29H9G4D6F9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ErrorNil_UIKit_HW4/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "home.ErrorNil-UIKit-HW4";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -668,6 +808,15 @@
 			buildConfigurations = (
 				F85AD08A2BBF2A12004CAB70 /* Debug */,
 				F85AD08B2BBF2A12004CAB70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F88248412BC2CB8400CCFCE9 /* Build configuration list for PBXNativeTarget "ErrorNil_UIKit_HW4" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F882483F2BC2CB8400CCFCE9 /* Debug */,
+				F88248402BC2CB8400CCFCE9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
