@@ -16,6 +16,7 @@ class ViewController: UIViewController {
         position: CGPoint(x: 30, y: 63),
         colot: .appBlack
     )
+    
     lazy var userUIImageView: UIImageView = {
         $0.image = UIImage(named: "46cbeddd920e98fbfbd8da6fa37c9afd")
         $0.frame.size = CGSize(width: view.frame.width - 60, height: 392)
@@ -23,9 +24,11 @@ class ViewController: UIViewController {
         $0.clipsToBounds = true
         $0.layer.cornerRadius = 40
         $0.contentMode = .scaleAspectFill
+        $0.isUserInteractionEnabled = true
         
         return $0
     }(UIImageView())
+    
     lazy var roundDotButton = AppElements.createRoundButton(
         logotip: "three_dots_menu_icon_184614",
         corner: 24.5,
@@ -33,6 +36,7 @@ class ViewController: UIViewController {
         position: CGPoint(x: userUIImageView.frame.width - 76, y: 21),
         iconPadding: NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
     )
+    
     lazy var roundInstagramButton = AppElements.createRoundButton(
         color: .black,
         logotip: "instagram_f_icon-icons.com_65485",
@@ -41,6 +45,7 @@ class ViewController: UIViewController {
         position: CGPoint(x: 0, y: 21),
         iconPadding: NSDirectionalEdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8)
     )
+    
     lazy var roundTikTokButton = AppElements.createRoundButton(
         color: .black,
         logotip: "tiktok_logo_icon_144802",
@@ -49,6 +54,7 @@ class ViewController: UIViewController {
         position: CGPoint(x: 42, y: 21),
         iconPadding: NSDirectionalEdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8)
     )
+    
     lazy var roundVCButton = AppElements.createRoundButton(
         color: .black,
         logotip: "rus-vk-02_icon-icons.com_50758",
@@ -57,6 +63,7 @@ class ViewController: UIViewController {
         position: CGPoint(x: 54, y: 21),
         iconPadding: NSDirectionalEdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8)
     )
+    
     lazy var roundСrossButton = AppElements.createRoundButton(
         color: .appGray,
         logotip: "efb29f935440baa36369b59581916287",
@@ -66,6 +73,7 @@ class ViewController: UIViewController {
         logoTintColor: .black,
         iconPadding: NSDirectionalEdgeInsets(top: 21, leading: 21, bottom: 21, trailing: 21)
     )
+    
     lazy var roundHeartButton = AppElements.createRoundButton(
         color: .appGray,
         logotip: "351d8daef2f0d70572d53c16d2c9f3ac",
@@ -75,6 +83,7 @@ class ViewController: UIViewController {
         logoTintColor: .red,
         iconPadding: NSDirectionalEdgeInsets(top: 15, leading: 15, bottom: 15, trailing: 15)
     )
+    
     lazy var wtireButton: UIButton = {
         $0.setTitle("Написать", for: .normal)
         $0.backgroundColor = .appGreen
@@ -86,6 +95,7 @@ class ViewController: UIViewController {
         
         return $0
     }(UIButton())
+    
     lazy var hStackSocila: UIStackView = {
         $0.axis = .horizontal
         $0.spacing = 12
@@ -100,19 +110,32 @@ class ViewController: UIViewController {
         return $0
     }(UIStackView())
     
-    lazy var nameLabel = AppElements.createLabel(text: "Боня Васюкова", font: .boldSystemFont(ofSize: 20), size: CGSize(width: 800, height: 24), position: CGPoint(x: 0, y: 0 ), colot: .white)
-    lazy var ageLabel = AppElements.createLabel(text: "25 лет", font: .systemFont(ofSize: 16), size: CGSize(width: 800, height: 19), position: CGPoint(x: 0, y: 0 ), colot: .white)
+    lazy var nameLabel = AppElements.createLabel(
+        text: "Боня Васюкова",
+        font: .boldSystemFont(ofSize: 20),
+        size: .zero,
+        position: .zero,
+        colot: .white
+    )
+    
+    lazy var ageLabel = AppElements.createLabel(
+        text: "25 лет",
+        font: .systemFont(ofSize: 16),
+        size: .zero,
+        position: .zero,
+        colot: .white
+    )
+    
     lazy var medal: UIImageView = {
-        $0.image = UIImage(named: "3074870375a79ea025b44239b2132819")
-        
+        $0.image = UIImage(named: "imageMedal")
+        $0.contentMode = .scaleAspectFit
         return $0
     }(UIImageView())
     
     lazy var hStackLabelName: UIStackView = {
         $0.axis = .horizontal
-        $0.spacing = 1
+        $0.spacing = 10
         $0.alignment = .leading
-        $0.distribution = .fillEqually
         $0.frame.size = CGSize(width: 200, height: 34)
         $0.frame.origin = CGPoint(x: 31, y: 1)
         $0.addArrangedSubview(nameLabel)
@@ -125,13 +148,10 @@ class ViewController: UIViewController {
         $0.axis = .vertical
         $0.spacing = 1
         $0.alignment = .leading
-        $0.distribution = .equalSpacing
         $0.frame.size = CGSize(width: userUIImageView.frame.width - 60, height: 44)
         $0.frame.origin = CGPoint(x: 30, y: 298)
         $0.addArrangedSubview(hStackLabelName)
         $0.addArrangedSubview(ageLabel)
-        
-        
         
         return $0
     }(UIStackView())
@@ -144,7 +164,5 @@ class ViewController: UIViewController {
         
         [appName, userUIImageView, roundСrossButton, roundHeartButton, wtireButton].forEach {view.addSubview($0)}
     }
-
-
 }
 

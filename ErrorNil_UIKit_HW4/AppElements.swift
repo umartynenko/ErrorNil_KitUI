@@ -39,6 +39,7 @@ class AppElements {
 
             return logo
         }()
+        
         let button = UIButton(configuration: logo)
         button.backgroundColor = color
         button.frame.size = size
