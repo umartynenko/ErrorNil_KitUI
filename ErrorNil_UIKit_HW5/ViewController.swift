@@ -32,7 +32,6 @@ class ViewController: UIViewController {
         view.addSubview(tableView)
         
         title = "Friends"
-        print(users)
         navigationController?.navigationBar.prefersLargeTitles = true
     }
 }
