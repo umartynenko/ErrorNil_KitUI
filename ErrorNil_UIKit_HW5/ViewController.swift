@@ -34,7 +34,6 @@ class ViewController: UIViewController {
         title = "Friends"
         print(users)
         navigationController?.navigationBar.prefersLargeTitles = true
-        
     }
 }
 
@@ -70,23 +69,23 @@ extension ViewController: UITableViewDataSource {
 extension ViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //        print(users[indexPath.section][indexPath.row].id, users[indexPath.section][indexPath.row].userName, users[indexPath.section][indexPath.row].messages)
         let userVC = UserViewController()
         userVC.delegate = self
         userVC.fullName = users[indexPath.section][indexPath.row].userName
         userVC.userImage = users[indexPath.section][indexPath.row].image
         userVC.userMassage = users[indexPath.section][indexPath.row].messages
         userVC.numSection = indexPath.section
-        
         userVC.numRow = indexPath.row
+        
         self.navigationController?.pushViewController(userVC, animated: true)
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-//        print(users[indexPath.section][indexPath.row].messages)
+    func tableView(
+        _ tableView: UITableView,
+        commit editingStyle: UITableViewCell.EditingStyle,
+        forRowAt indexPath: IndexPath
+    ) {
         users[indexPath.section][indexPath.row].messages.remove(at: 0)
-//        print(users[indexPath.section][indexPath.row].messages)
-//        print(users[1][0].messages)
         tableView.reloadData()
     }
     
@@ -102,6 +101,7 @@ extension ViewController: UITableViewDelegate {
     }
 }
 
+
 extension ViewController: ViewControllerDelegate {
     func deletingUserMessage(section: Int, row: Int, messages: [String]) {
         for message in messages {
@@ -110,8 +110,7 @@ extension ViewController: ViewControllerDelegate {
                     users[section][row].messages.remove(at: index)
                 }
             }
-            tableView.reloadData()
         }
-        
+        tableView.reloadData()
     }
 }

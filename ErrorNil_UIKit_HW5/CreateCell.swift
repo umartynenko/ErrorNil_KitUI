@@ -56,7 +56,6 @@ func generatorCellUser() -> [[CellUser]] {
         cellUser.append(users)
     }
     
-    
     return cellUser
 }
 
@@ -84,5 +83,6 @@ func createUserMessageCell(userName: String, userMassages: [String], userImage: 
     for message in userMassages {
         cellMessage.append(UserMassages(userName: userName, message: message, image: userImage))
     }
+    
     return cellMessage
 }

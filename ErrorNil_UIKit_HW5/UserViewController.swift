@@ -26,7 +26,6 @@ class UserViewController: UIViewController {
         $0.layer.cornerRadius = 68
         $0.frame.origin = CGPoint(x: view.center.x - $0.frame.width / 2, y: 114)
         
-        
         return $0
     }(UIImageView())
     
