@@ -32,6 +32,7 @@
 		F88D5A8A2BC8605E000D649E /* Base in Resources */ = {isa = PBXBuildFile; fileRef = F88D5A892BC8605E000D649E /* Base */; };
 		F88D5A902BC863C0000D649E /* CreateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88D5A8F2BC863C0000D649E /* CreateCell.swift */; };
 		F88D5A922BC864C7000D649E /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88D5A912BC864C7000D649E /* UserViewController.swift */; };
+		F88D5A952BC881EF000D649E /* LoremSwiftum in Frameworks */ = {isa = PBXBuildFile; productRef = F88D5A942BC881EF000D649E /* LoremSwiftum */; };
 		F8CE8D6B2BB4A7F50024E253 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CE8D6A2BB4A7F50024E253 /* AppDelegate.swift */; };
 		F8CE8D6D2BB4A7F50024E253 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CE8D6C2BB4A7F50024E253 /* SceneDelegate.swift */; };
 		F8CE8D6F2BB4A7F50024E253 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CE8D6E2BB4A7F50024E253 /* ViewController.swift */; };
@@ -114,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F88D5A952BC881EF000D649E /* LoremSwiftum in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +301,9 @@
 			dependencies = (
 			);
 			name = ErrorNil_UIKit_HW5;
+			packageProductDependencies = (
+				F88D5A942BC881EF000D649E /* LoremSwiftum */,
+			);
 			productName = ErrorNil_UIKit_HW5;
 			productReference = F88D5A7B2BC8605C000D649E /* ErrorNil_UIKit_HW5.app */;
 			productType = "com.apple.product-type.application";
@@ -356,6 +361,9 @@
 				Base,
 			);
 			mainGroup = F8CE8D5E2BB4A7F50024E253;
+			packageReferences = (
+				F88D5A932BC881EF000D649E /* XCRemoteSwiftPackageReference "LoremSwiftum" */,
+			);
 			productRefGroup = F8CE8D682BB4A7F50024E253 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -993,6 +1001,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F88D5A932BC881EF000D649E /* XCRemoteSwiftPackageReference "LoremSwiftum" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lukaskubanek/LoremSwiftum";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F88D5A942BC881EF000D649E /* LoremSwiftum */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F88D5A932BC881EF000D649E /* XCRemoteSwiftPackageReference "LoremSwiftum" */;
+			productName = LoremSwiftum;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F8CE8D5F2BB4A7F50024E253 /* Project object */;
 }

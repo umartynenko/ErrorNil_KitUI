@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         view.addSubview(tableView)
         
         title = "Friends"
-        
+        print(users)
         navigationController?.navigationBar.prefersLargeTitles = true
         
     }
@@ -72,20 +72,21 @@ extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //        print(users[indexPath.section][indexPath.row].id, users[indexPath.section][indexPath.row].userName, users[indexPath.section][indexPath.row].messages)
         let userVC = UserViewController()
+        userVC.delegate = self
         userVC.fullName = users[indexPath.section][indexPath.row].userName
         userVC.userImage = users[indexPath.section][indexPath.row].image
         userVC.userMassage = users[indexPath.section][indexPath.row].messages
         userVC.numSection = indexPath.section
-        userVC.delegate = self
+        
         userVC.numRow = indexPath.row
         self.navigationController?.pushViewController(userVC, animated: true)
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        print(users[indexPath.section][indexPath.row].messages)
+//        print(users[indexPath.section][indexPath.row].messages)
         users[indexPath.section][indexPath.row].messages.remove(at: 0)
-        print(users[indexPath.section][indexPath.row].messages)
-        print(users[1][0].messages)
+//        print(users[indexPath.section][indexPath.row].messages)
+//        print(users[1][0].messages)
         tableView.reloadData()
     }
     
@@ -109,7 +110,8 @@ extension ViewController: ViewControllerDelegate {
                     users[section][row].messages.remove(at: index)
                 }
             }
+            tableView.reloadData()
         }
-        tableView.reloadData()
+        
     }
 }

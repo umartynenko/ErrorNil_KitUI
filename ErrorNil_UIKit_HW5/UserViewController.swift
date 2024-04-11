@@ -8,7 +8,6 @@
 import UIKit
 
 
-
 class UserViewController: UIViewController {
     
     weak var delegate: ViewControllerDelegate?
@@ -84,15 +83,9 @@ extension UserViewController: UITableViewDataSource {
 
 extension UserViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-//        print(indexPath)
-//        print(userCellMessage[indexPath.row].message)
         arrayOfDeletedMessages.append(userCellMessage[indexPath.row].message)
         userCellMessage.remove(at: indexPath.row)
         tableView.deleteRows(at: [indexPath], with: .automatic)
-        
-        
-//        print(arrayOfDeletedMessages)
-        
         self.delegate?.deletingUserMessage(section: numSection, row: numRow, messages: arrayOfDeletedMessages)
     }
     
