@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "medium-shot-stylish-man-posing_23-2148895163.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

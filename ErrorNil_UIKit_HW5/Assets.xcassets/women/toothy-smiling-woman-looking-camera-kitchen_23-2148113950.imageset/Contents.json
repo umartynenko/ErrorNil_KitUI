@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "toothy-smiling-woman-looking-camera-kitchen_23-2148113950.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

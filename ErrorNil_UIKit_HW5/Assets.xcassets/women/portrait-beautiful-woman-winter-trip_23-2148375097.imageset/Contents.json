@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "portrait-beautiful-woman-winter-trip_23-2148375097.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
