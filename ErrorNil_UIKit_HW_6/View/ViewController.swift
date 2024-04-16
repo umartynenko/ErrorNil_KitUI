@@ -39,6 +39,14 @@ extension ViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ListViewCell
         cell.setupCell(item: tableData[indexPath.row])
         cell.selectionStyle = .none
+        cell.completion = { [weak self] in
+            let userDetailVC = UserDetailViewController()
+            userDetailVC.userName = (self?.tableData[indexPath.row].title)!
+            userDetailVC.titleImage = (self?.tableData[indexPath.row].iamge[0])!
+            userDetailVC.text = (self?.tableData[indexPath.row].message)!
+            userDetailVC.arraUserImage = Array((self?.tableData[indexPath.row].iamge[1...3])!)
+            self?.navigationController?.pushViewController(userDetailVC, animated: true)
+        }
     
         return cell
     }

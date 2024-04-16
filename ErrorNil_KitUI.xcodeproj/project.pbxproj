@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F805C9682BCDCFB600CB3226 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F805C9672BCDCFB600CB3226 /* UserDetailViewController.swift */; };
+		F805C96A2BCE3EE100CB3226 /* CustomCellImageSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F805C9692BCE3EE100CB3226 /* CustomCellImageSecondView.swift */; };
+		F805C96C2BCE435400CB3226 /* UserImageSecondTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F805C96B2BCE435400CB3226 /* UserImageSecondTableViewCell.swift */; };
 		F83205DF2BBB29EB005DB3C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83205DE2BBB29EB005DB3C3 /* AppDelegate.swift */; };
 		F83205E12BBB29EB005DB3C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83205E02BBB29EB005DB3C3 /* SceneDelegate.swift */; };
 		F83205E32BBB29EB005DB3C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83205E22BBB29EB005DB3C3 /* ViewController.swift */; };
@@ -52,6 +55,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F805C9672BCDCFB600CB3226 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		F805C9692BCE3EE100CB3226 /* CustomCellImageSecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellImageSecondView.swift; sourceTree = "<group>"; };
+		F805C96B2BCE435400CB3226 /* UserImageSecondTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserImageSecondTableViewCell.swift; sourceTree = "<group>"; };
 		F83205DC2BBB29EB005DB3C3 /* ErrorNil_UIKit_HW_2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ErrorNil_UIKit_HW_2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F83205DE2BBB29EB005DB3C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F83205E02BBB29EB005DB3C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -228,7 +234,6 @@
 				F8BC6F442BCBCCEF009DBCBC /* Model */,
 				F8BC6F322BCBC229009DBCBC /* AppDelegate.swift */,
 				F8BC6F342BCBC229009DBCBC /* SceneDelegate.swift */,
-				F8BC6F362BCBC229009DBCBC /* ViewController.swift */,
 				F8BC6F3B2BCBC229009DBCBC /* Assets.xcassets */,
 				F8BC6F3D2BCBC229009DBCBC /* LaunchScreen.storyboard */,
 				F8BC6F402BCBC229009DBCBC /* Info.plist */,
@@ -241,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				F8BC6F472BCBCDA0009DBCBC /* CustomCellFirstView.swift */,
+				F805C9692BCE3EE100CB3226 /* CustomCellImageSecondView.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -248,7 +254,9 @@
 		F8BC6F4C2BCBDE96009DBCBC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F8BC6F362BCBC229009DBCBC /* ViewController.swift */,
 				F8BC6F4D2BCBDEBB009DBCBC /* Cell */,
+				F805C9672BCDCFB600CB3226 /* UserDetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -257,6 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				F8BC6F4E2BCBDF1A009DBCBC /* TableViewCell.swift */,
+				F805C96B2BCE435400CB3226 /* UserImageSecondTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -575,12 +584,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F805C9682BCDCFB600CB3226 /* UserDetailViewController.swift in Sources */,
 				F8BC6F4F2BCBDF1A009DBCBC /* TableViewCell.swift in Sources */,
 				F8BC6F372BCBC229009DBCBC /* ViewController.swift in Sources */,
 				F8BC6F332BCBC229009DBCBC /* AppDelegate.swift in Sources */,
 				F8BC6F482BCBCDA0009DBCBC /* CustomCellFirstView.swift in Sources */,
 				F8BC6F512BCBE433009DBCBC /* AppElement.swift in Sources */,
 				F8BC6F352BCBC229009DBCBC /* SceneDelegate.swift in Sources */,
+				F805C96A2BCE3EE100CB3226 /* CustomCellImageSecondView.swift in Sources */,
+				F805C96C2BCE435400CB3226 /* UserImageSecondTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

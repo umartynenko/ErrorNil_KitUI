@@ -14,7 +14,7 @@ final class ListViewCell: UITableViewCell {
         clipsToBounds = true
     }
     
-
+    var completion: (() -> Void)?
     
     func setupCell(item: CustomCellFirstView) {
         lazy var cellView: UIView = {
@@ -39,11 +39,13 @@ final class ListViewCell: UITableViewCell {
         
         lazy var userNameCell = AppElement.userName(
             name: item.title,
-            frame: CGRect(x: 20, y: 70, width: cellList.bounds.width - 40, height: 24))
+            frame: CGRect(x: 20, y: 70, width: cellList.bounds.width - 40, height: 24),
+            color: .white
+        )
         
         lazy var userTextCell = AppElement.userNameText(
             name: item.message,
-            frame: CGRect(x: 20, y: userNameCell.frame.maxY + 4, width: cellList.bounds.width - 40, height: 70))
+            frame: CGRect(x: 20, y: userNameCell.frame.maxY + 4, width: cellList.bounds.width - 40, height: 70), color: .white)
         
         lazy var cellSmallImageFirst = AppElement.createCell(
             name: item.iamge[1],
@@ -77,6 +79,8 @@ final class ListViewCell: UITableViewCell {
             return $0
         }(UIStackView())
         
+        
+        
         lazy var cellUserButton: UIButton = {
             $0.setTitle("show details", for: .normal)
             $0.setTitleColor(.white, for: .normal)
@@ -86,9 +90,9 @@ final class ListViewCell: UITableViewCell {
             $0.frame.origin = CGPoint(x: 30, y: hStackCell.frame.maxY + 17)
             
             return $0
-        }(UIButton())
-        
-        print(viewInCell.frame.width, viewInCell.frame.height)
+        }(UIButton(primaryAction: UIAction(handler: { [weak self] _ in
+            self?.completion?()
+        })))
         
         [userNameCell, userTextCell].forEach {cellList.addSubview($0)}
         [cellList, hStackCell, cellUserButton].forEach {viewInCell.addSubview($0)}

@@ -24,22 +24,24 @@ class AppElement {
         }(UIImageView())
     }
     
-    static func userName(name: String, frame: CGRect) -> UILabel {
+    static func userName(name: String, textAlignment: NSTextAlignment = .left, frame: CGRect, color: UIColor, fontSize: CGFloat = 20, weight: UIFont.Weight = .bold) -> UILabel {
         {
             $0.text = name
+            $0.textAlignment = textAlignment
             $0.frame = frame
-            $0.textColor = .white
-            $0.font = .systemFont(ofSize: 20, weight: .bold)
+            $0.textColor = color
+            $0.font = .systemFont(ofSize: fontSize, weight: weight)
     
             return $0
         }(UILabel())
     }
     
-    static func userNameText(name: String, frame: CGRect) -> UILabel {
+    static func userNameText(name: String, textAlignment: NSTextAlignment = .left, frame: CGRect, color: UIColor) -> UILabel {
         {
             $0.text = name
+            $0.textAlignment = textAlignment
             $0.frame = frame
-            $0.textColor = .white
+            $0.textColor = color
             $0.font = .systemFont(ofSize: 14, weight: .regular)
             $0.backgroundColor = .clear
             $0.numberOfLines = 4
