@@ -15,6 +15,7 @@ class UserImageSecondTableViewCell: UITableViewCell {
     
     func setupImageCell(item: UserImage) {
         let cellView: UIView = {
+            $0.frame.size = CGSize(width: bounds.width, height: 201)
             
             return $0
         }(UIView(frame: bounds))
@@ -26,7 +27,7 @@ class UserImageSecondTableViewCell: UITableViewCell {
             $0.clipsToBounds = true
             
             return $0
-        }(UIImageView(frame: CGRect(x:   30, y: 30, width: cellView.bounds.width - 60, height: 201)))
+        }(UIImageView(frame: CGRect(x: 30, y: 30, width: cellView.bounds.width - 60, height: 201)))
         
         addSubview(cellImage)
     }

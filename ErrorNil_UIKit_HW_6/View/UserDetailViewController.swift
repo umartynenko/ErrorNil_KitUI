@@ -44,7 +44,7 @@ final class UserDetailViewController: UIViewController {
         $0.separatorStyle = .none
         
         return $0
-    }(UITableView(frame: CGRect(origin: CGPoint(x: 0, y: textUserLabelView.frame.maxY + 44), size: CGSize(width: view.frame.width, height: view.frame.height))))
+    }(UITableView(frame: CGRect(origin: CGPoint(x: 0, y: textUserLabelView.frame.maxY + 44), size: CGSize(width: view.frame.width, height: view.frame.width))))
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,19 +63,7 @@ extension UserDetailViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "imageUserCell", for: indexPath) as! UserImageSecondTableViewCell
-        
-        
         cell.setupImageCell(item: userCellImage[indexPath.row ])
-//        let user = userCellImage[indexPath.row]
-//        
-//        var config = cell.defaultContentConfiguration()
-//        config.image = UIImage(named: user.image)
-//        
-////        config.imageProperties.maximumSize = CGSize(width: 400 , height: 201)
-//        config.imageProperties.cornerRadius = 20
-//        config.imageProperties.reservedLayoutSize = CGSize(width: userImageTableView.frame.width , height: 201)
-//        
-//        cell.contentConfiguration = config
         cell.selectionStyle = .none
         
         return cell
@@ -85,7 +73,14 @@ extension UserDetailViewController: UITableViewDataSource {
 
 extension UserDetailViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        view.frame.width - 60
+        235
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let imageVC = ImageViewController()
+        imageVC.imageUser = userCellImage[indexPath.row].image
+        
+        self.navigationController?.pushViewController(imageVC, animated: true)
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
