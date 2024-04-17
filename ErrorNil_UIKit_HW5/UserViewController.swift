@@ -11,7 +11,7 @@ import UIKit
 class UserViewController: UIViewController {
     
     weak var delegate: ViewControllerDelegate?
-    
+
     var userImage: String = ""
     var fullName: String = ""
     var userMassage: [String] = []

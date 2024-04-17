@@ -30,8 +30,6 @@ final class ListViewCell: UITableViewCell {
             return $0
         }(UIView())
         
-        
-        
         lazy var cellList = AppElement.createCell(
             name: item.iamge[0],
             frame: CGRect(x: 25, y: 15, width: viewInCell.bounds.width - 50, height: 190)
