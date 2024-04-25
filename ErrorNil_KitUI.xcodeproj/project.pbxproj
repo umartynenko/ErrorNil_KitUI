@@ -61,6 +61,11 @@
 		F8C14FBB2BDA203600F97038 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C14FBA2BDA203600F97038 /* ViewController.swift */; };
 		F8C14FC02BDA203700F97038 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8C14FBF2BDA203700F97038 /* Assets.xcassets */; };
 		F8C14FC32BDA203700F97038 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = F8C14FC22BDA203700F97038 /* Base */; };
+		F8C14FCA2BDAC59F00F97038 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C14FC92BDAC59F00F97038 /* Item.swift */; };
+		F8C14FCC2BDADED800F97038 /* LoremSwiftum in Frameworks */ = {isa = PBXBuildFile; productRef = F8C14FCB2BDADED800F97038 /* LoremSwiftum */; };
+		F8C14FCF2BDAE79B00F97038 /* CardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C14FCE2BDAE79B00F97038 /* CardItem.swift */; };
+		F8C14FD22BDAEE5000F97038 /* UIView.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C14FD12BDAEE5000F97038 /* UIView.ext.swift */; };
+		F8C14FD42BDAF16F00F97038 /* AppElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C14FD32BDAF16F00F97038 /* AppElements.swift */; };
 		F8CE8D6B2BB4A7F50024E253 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CE8D6A2BB4A7F50024E253 /* AppDelegate.swift */; };
 		F8CE8D6D2BB4A7F50024E253 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CE8D6C2BB4A7F50024E253 /* SceneDelegate.swift */; };
 		F8CE8D6F2BB4A7F50024E253 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CE8D6E2BB4A7F50024E253 /* ViewController.swift */; };
@@ -138,6 +143,10 @@
 		F8C14FBF2BDA203700F97038 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8C14FC22BDA203700F97038 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8C14FC42BDA203700F97038 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8C14FC92BDAC59F00F97038 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		F8C14FCE2BDAE79B00F97038 /* CardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItem.swift; sourceTree = "<group>"; };
+		F8C14FD12BDAEE5000F97038 /* UIView.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.ext.swift; sourceTree = "<group>"; };
+		F8C14FD32BDAF16F00F97038 /* AppElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppElements.swift; sourceTree = "<group>"; };
 		F8CE8D672BB4A7F50024E253 /* ErrorNil_KitUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ErrorNil_KitUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8CE8D6A2BB4A7F50024E253 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8CE8D6C2BB4A7F50024E253 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -199,6 +208,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8C14FCC2BDADED800F97038 /* LoremSwiftum in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,14 +402,42 @@
 		F8C14FB52BDA203600F97038 /* ErrorNil_UIKit_HW9 */ = {
 			isa = PBXGroup;
 			children = (
+				F8C14FD02BDAEE1A00F97038 /* MyExtension */,
+				F8C14FCD2BDAE76000F97038 /* View */,
+				F8C14FC82BDAC58900F97038 /* Model */,
 				F8C14FB62BDA203600F97038 /* AppDelegate.swift */,
 				F8C14FB82BDA203600F97038 /* SceneDelegate.swift */,
 				F8C14FBA2BDA203600F97038 /* ViewController.swift */,
 				F8C14FBF2BDA203700F97038 /* Assets.xcassets */,
 				F8C14FC12BDA203700F97038 /* LaunchScreen.storyboard */,
 				F8C14FC42BDA203700F97038 /* Info.plist */,
+				F8C14FD32BDAF16F00F97038 /* AppElements.swift */,
 			);
 			path = ErrorNil_UIKit_HW9;
+			sourceTree = "<group>";
+		};
+		F8C14FC82BDAC58900F97038 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F8C14FC92BDAC59F00F97038 /* Item.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F8C14FCD2BDAE76000F97038 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F8C14FCE2BDAE79B00F97038 /* CardItem.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F8C14FD02BDAEE1A00F97038 /* MyExtension */ = {
+			isa = PBXGroup;
+			children = (
+				F8C14FD12BDAEE5000F97038 /* UIView.ext.swift */,
+			);
+			path = MyExtension;
 			sourceTree = "<group>";
 		};
 		F8CE8D5E2BB4A7F50024E253 = {
@@ -570,6 +608,9 @@
 			dependencies = (
 			);
 			name = ErrorNil_UIKit_HW9;
+			packageProductDependencies = (
+				F8C14FCB2BDADED800F97038 /* LoremSwiftum */,
+			);
 			productName = ErrorNil_UIKit_HW9;
 			productReference = F8C14FB42BDA203600F97038 /* ErrorNil_UIKit_HW9.app */;
 			productType = "com.apple.product-type.application";
@@ -815,9 +856,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8C14FCA2BDAC59F00F97038 /* Item.swift in Sources */,
 				F8C14FBB2BDA203600F97038 /* ViewController.swift in Sources */,
+				F8C14FCF2BDAE79B00F97038 /* CardItem.swift in Sources */,
 				F8C14FB72BDA203600F97038 /* AppDelegate.swift in Sources */,
 				F8C14FB92BDA203600F97038 /* SceneDelegate.swift in Sources */,
+				F8C14FD42BDAF16F00F97038 /* AppElements.swift in Sources */,
+				F8C14FD22BDAEE5000F97038 /* UIView.ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1580,6 +1625,11 @@
 			productName = LoremSwiftum;
 		};
 		F88D5A942BC881EF000D649E /* LoremSwiftum */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F88D5A932BC881EF000D649E /* XCRemoteSwiftPackageReference "LoremSwiftum" */;
+			productName = LoremSwiftum;
+		};
+		F8C14FCB2BDADED800F97038 /* LoremSwiftum */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F88D5A932BC881EF000D649E /* XCRemoteSwiftPackageReference "LoremSwiftum" */;
 			productName = LoremSwiftum;
