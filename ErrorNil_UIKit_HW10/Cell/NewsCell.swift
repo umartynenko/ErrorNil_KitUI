@@ -10,7 +10,7 @@ import UIKit
 
 class NewsCell: UICollectionViewCell, CellProtocol {
     static var reuseID: String = "NewsCell"
-    lazy var imageView: UIImageView = AppElements.createImage(corner: 15, width: 100)
+    lazy var imageView: UIImageView = AppElements.createImage(corner: 15)
     lazy var title: UILabel = AppElements.createLabel(fontSize: 24, fontWeight: .bold, fontColor: .white)
     lazy var text: UILabel = AppElements.createLabel(fontSize: 14, fontColor: .white)
     
