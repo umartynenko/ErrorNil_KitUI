@@ -10,7 +10,7 @@ import UIKit
 
 
 class AppElements {
-    static func createImage(corner: CGFloat, width: CGFloat) -> UIImageView {
+    static func createImage(corner: CGFloat, width: CGFloat = 0) -> UIImageView {
         {
             .config(view: $0) {setupImage in
                 setupImage.contentMode = .scaleAspectFill
@@ -22,11 +22,13 @@ class AppElements {
         }(UIImageView())
     }
     
-    static func createLabel(alignment: NSTextAlignment = .left) -> UILabel {
+    static func createLabel(alignment: NSTextAlignment = .left, fontSize: CGFloat, fontWeight: UIFont.Weight = .regular, fontColor: UIColor = .black) -> UILabel {
         {
             .config(view: $0) {setupNameLabel in
                 setupNameLabel.textAlignment = alignment
                 setupNameLabel.numberOfLines = 0
+                setupNameLabel.font = .systemFont(ofSize: fontSize, weight: fontWeight)
+                setupNameLabel.textColor = fontColor
             }
         }(UILabel())
     }

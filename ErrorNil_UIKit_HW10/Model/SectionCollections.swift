@@ -43,9 +43,26 @@ struct SectionCollections: Identifiable {
             ItemCollection(image: "woman-showing-with-one-hand-mini-house-real-state-concept-ai-generative_123827-24098",
                            text: Lorem.sentence),
         ]
+        let newsItems = [
+            ItemCollection(image: "ahmed-Ep6WCCtJFRk-unsplash", header: Lorem.title, text: Lorem.sentence),
+            ItemCollection(image: "lala-azizli-vVJn0k8v5vU-unsplash", header: Lorem.title, text: Lorem.sentence),
+            ItemCollection(image: "art-institute-of-chicago-zNXMHFOf6yU-unsplash", header: Lorem.title, text: Lorem.sentence),
+            ItemCollection(image: "daniel-lincoln-5AiN3pLyJLU-unsplash", header: Lorem.title, text: Lorem.sentence),
+            ItemCollection(image: "austin-curtis-ZjYopWItB_I-unsplash", header: Lorem.title, text: Lorem.sentence),
+            ItemCollection(image: "pawel-czerwinski-IWB5zcF6uLc-unsplash", header: Lorem.title, text: Lorem.sentence),
+        ]
+        let bannerItems = [
+            ItemCollection(image: "dario-daniel-silva--edfmnxXaKQ-unsplash"),
+            ItemCollection(image: "ellie-ellien-tJ9ZwimIGjc-unsplash"),
+            ItemCollection(image: "gavin-wilson-tAAZqXh7CvM-unsplash"),
+            ItemCollection(image: "musa-ortac-W6wfVyJ_Zzc-unsplash"),
+            ItemCollection(image: "parker-coffman-IlUpkDzb7Xg-unsplash"),
+        ]
         let storySection = SectionCollections(header: "Stories", items: storyItems)
-        let messageSection = SectionCollections(header: "Message", items: messageItems)
+        let messageSection = SectionCollections(header: "Messages", items: messageItems)
+        let newsSection = SectionCollections(header: "News", items: newsItems)
+        let bannerSection = SectionCollections(header: "Banners", items: bannerItems)
         
-        return [storySection, messageSection]
+        return [storySection, messageSection, newsSection, bannerSection]
     }
 }

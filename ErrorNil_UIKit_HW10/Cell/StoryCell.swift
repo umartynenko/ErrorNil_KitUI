@@ -7,11 +7,12 @@
 
 import UIKit
 
+
 class StoryCell: UICollectionViewCell, CellProtocol {
     static var reuseID: String = "StoryCell"
     
     lazy var imageView: UIImageView = AppElements.createImage(corner: 40, width: 80)
-    lazy var nameLabel: UILabel = AppElements.createLabel(alignment: .center)
+    lazy var nameLabel: UILabel = AppElements.createLabel(alignment: .center, fontSize: 16)
     
     func setupCell(item: ItemCollection) {
         addSubview(imageView)

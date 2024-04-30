@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class MessageCell: UICollectionViewCell, CellProtocol {
     static var reuseID: String = "MessageCell"
     
@@ -23,7 +24,7 @@ class MessageCell: UICollectionViewCell, CellProtocol {
     }
     
     lazy var imageView: UIImageView = AppElements.createImage(corner: 20, width: 60)
-    lazy var textLabel: UILabel = AppElements.createLabel()
+    lazy var textLabel: UILabel = AppElements.createLabel(fontSize: 14)
     
     func setupCell(item: ItemCollection) {
         addSubview(imageView)
