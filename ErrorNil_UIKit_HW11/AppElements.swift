@@ -16,6 +16,7 @@ class AppElements {
                 setupImage.contentMode = .scaleAspectFill
                 setupImage.clipsToBounds = true
                 setupImage.layer.cornerRadius = corner
+                setupImage.isUserInteractionEnabled = true
             }
         }(UIImageView())
     }
@@ -35,5 +36,16 @@ class AppElements {
                 setupLabel.textAlignment = alignment
             }
         }(UILabel())
+    }
+    
+    static func createButton(setImage: String? = nil, title: String? = nil, color: UIColor = .black, titleAlignment: UIControl.ContentHorizontalAlignment = .center, action: UIAction) -> UIButton {
+        {
+            .config(view: $0) { setupButton in
+                setupButton.setImage(UIImage(systemName: setImage ?? ""), for: .normal)
+                setupButton.setTitle(title, for: .normal)
+                setupButton.tintColor = color
+                setupButton.contentHorizontalAlignment = titleAlignment
+            }
+        }(UIButton(type: .system, primaryAction: action))
     }
 }

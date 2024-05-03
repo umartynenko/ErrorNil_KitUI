@@ -34,6 +34,8 @@
 		F8124EAD2BE2E7B400676CCA /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8124EAC2BE2E7B400676CCA /* Protocols.swift */; };
 		F8124EAF2BE2E94100676CCA /* AppElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8124EAE2BE2E94100676CCA /* AppElements.swift */; };
 		F8124EB22BE3568000676CCA /* UIView.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8124EB12BE3568000676CCA /* UIView.ext.swift */; };
+		F8124EB42BE4AD3700676CCA /* EventsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8124EB32BE4AD3700676CCA /* EventsCollectionViewCell.swift */; };
+		F8124EB62BE580DF00676CCA /* UsersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8124EB52BE580DF00676CCA /* UsersCollectionViewCell.swift */; };
 		F83205DF2BBB29EB005DB3C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83205DE2BBB29EB005DB3C3 /* AppDelegate.swift */; };
 		F83205E12BBB29EB005DB3C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83205E02BBB29EB005DB3C3 /* SceneDelegate.swift */; };
 		F83205E32BBB29EB005DB3C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83205E22BBB29EB005DB3C3 /* ViewController.swift */; };
@@ -133,6 +135,8 @@
 		F8124EAC2BE2E7B400676CCA /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		F8124EAE2BE2E94100676CCA /* AppElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppElements.swift; sourceTree = "<group>"; };
 		F8124EB12BE3568000676CCA /* UIView.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.ext.swift; sourceTree = "<group>"; };
+		F8124EB32BE4AD3700676CCA /* EventsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsCollectionViewCell.swift; sourceTree = "<group>"; };
+		F8124EB52BE580DF00676CCA /* UsersCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersCollectionViewCell.swift; sourceTree = "<group>"; };
 		F83205DC2BBB29EB005DB3C3 /* ErrorNil_UIKit_HW_2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ErrorNil_UIKit_HW_2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F83205DE2BBB29EB005DB3C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F83205E02BBB29EB005DB3C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -391,6 +395,8 @@
 			isa = PBXGroup;
 			children = (
 				F8124EAA2BE2E75000676CCA /* NewsCollectionViewCell.swift */,
+				F8124EB32BE4AD3700676CCA /* EventsCollectionViewCell.swift */,
+				F8124EB52BE580DF00676CCA /* UsersCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -1027,11 +1033,13 @@
 				F8124EA62BE2DDA300676CCA /* SectionCollections.swift in Sources */,
 				F8124EAB2BE2E75000676CCA /* NewsCollectionViewCell.swift in Sources */,
 				F8124EB22BE3568000676CCA /* UIView.ext.swift in Sources */,
+				F8124EB42BE4AD3700676CCA /* EventsCollectionViewCell.swift in Sources */,
 				F8124EAF2BE2E94100676CCA /* AppElements.swift in Sources */,
 				F8124EAD2BE2E7B400676CCA /* Protocols.swift in Sources */,
 				F8124E952BE2D8DA00676CCA /* ViewController.swift in Sources */,
 				F8124E912BE2D8DA00676CCA /* AppDelegate.swift in Sources */,
 				F8124EA42BE2DC8C00676CCA /* ItemCollection.swift in Sources */,
+				F8124EB62BE580DF00676CCA /* UsersCollectionViewCell.swift in Sources */,
 				F8124E932BE2D8DA00676CCA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

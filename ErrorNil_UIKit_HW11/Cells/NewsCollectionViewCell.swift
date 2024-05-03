@@ -9,13 +9,22 @@ import UIKit
 
 class NewsCollectionViewCell: UICollectionViewCell, CellProtocol {
     static var reuseID: String = "NewsCell"
+    lazy private var readNews = UIAction { [weak self] action in
+        print("read")
+    }
     lazy var imageView: UIImageView = AppElements.createImage(corner: 20)
     lazy var title: UILabel = AppElements.createLabel(fontSize: 20, fontWeight: .bold)
     lazy var date: UILabel = AppElements.createLabel(fontSize: 12, color: .appColorTextGray)
     lazy var text: UILabel = AppElements.createLabel()
+    lazy var readButton: UIButton = AppElements.createButton(
+        title: "Читать",
+        color: .white,
+        titleAlignment: .left,
+        action: readNews
+    )
     
     func setupCell(item: ItemCollection) {
-        [imageView, title, date, text].forEach { addSubview($0) }
+        [imageView, title, date, text, readButton].forEach { addSubview($0) }
         
         imageView.image = UIImage(named: item.image)
         title.text = item.title
@@ -39,7 +48,11 @@ class NewsCollectionViewCell: UICollectionViewCell, CellProtocol {
             text.topAnchor.constraint(equalTo: date.bottomAnchor, constant: 9),
             text.leadingAnchor.constraint(equalTo: date.leadingAnchor),
             text.trailingAnchor.constraint(equalTo: date.trailingAnchor),
-            text.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -22)
+            
+            readButton.topAnchor.constraint(equalTo: text.bottomAnchor, constant: 22),
+            readButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 25),
+            readButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -25),
+            readButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -22)
         ])
     }
 }
