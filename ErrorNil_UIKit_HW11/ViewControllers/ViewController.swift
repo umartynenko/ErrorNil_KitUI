@@ -47,7 +47,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .white
         view.addSubview(collectionView)
     }
     
@@ -205,6 +204,9 @@ extension ViewController: UICollectionViewDelegate {
                             for: indexPath
                         ) as! MainNewsHeaderCollectionReusableView
                         header.setupHeader(header: item.header)
+                        header.block = {
+                            print(indexPath)
+                        }
                         
                         return header
                     case UICollectionView.elementKindSectionFooter:
@@ -228,6 +230,9 @@ extension ViewController: UICollectionViewDelegate {
                             for: indexPath
                         ) as! MainEventsHeaderCollectionReusableView
                         header.setupHeader(header: item.header)
+                        header.block = {
+                            print(indexPath)
+                        }
                         
                         return header
                     default:
@@ -242,6 +247,9 @@ extension ViewController: UICollectionViewDelegate {
                             for: indexPath
                         ) as! MainUsersHeaderCollectionReusableView
                         header.setupHeader(header: item.header)
+                        header.block = {
+                            print(indexPath)
+                        }
                         
                         return header
                     default:

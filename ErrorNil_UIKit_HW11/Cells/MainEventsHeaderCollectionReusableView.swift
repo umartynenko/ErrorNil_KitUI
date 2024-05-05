@@ -10,9 +10,12 @@ import UIKit
 class MainEventsHeaderCollectionReusableView: UICollectionReusableView {
     static let reuseId = "MainEventsHeaderCollectionReusableView"
     
-    lazy private var readNews = UIAction { [weak self] action in
-        print("read")
+    var block: ( () -> Void)?
+    
+    lazy private var events = UIAction { [weak self] _ in
+        self?.block?()
     }
+    
     private lazy var headerStack: UIStackView = {
         .config(view: $0) { headerStack in
             headerStack.axis = .horizontal
@@ -27,7 +30,7 @@ class MainEventsHeaderCollectionReusableView: UICollectionReusableView {
         
         return $0
     }(UILabel())
-    private lazy var headerButton: UIButton = AppElements.createButton(setImage: "", title: "Подробнее", color: .systemBlue, action: readNews)
+    private lazy var headerButton: UIButton = AppElements.createButton(setImage: "", title: "Подробнее", color: .systemBlue, action: events)
     
     func setupHeader(header: String) {
         addSubview(headerStack)

@@ -11,6 +11,7 @@ import UIKit
 
 protocol CellProtocol: AnyObject {
     static var reuseID: String {get}
+    
     var imageView: UIImageView {get set}
     var text: UILabel {get set}
     

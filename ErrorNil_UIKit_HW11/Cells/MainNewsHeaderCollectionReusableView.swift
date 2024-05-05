@@ -10,9 +10,12 @@ import UIKit
 class MainNewsHeaderCollectionReusableView: UICollectionReusableView {
     static let reuseId = "MainNewsHeaderCollectionReusableView"
     
+    var block: ( () -> Void)?
+    
     lazy private var readNews = UIAction { [weak self] action in
-        print("read")
+        self?.block?()
     }
+    
     private lazy var headerStack: UIStackView = {
         .config(view: $0) { headerStack in
             headerStack.axis = .horizontal
@@ -27,12 +30,6 @@ class MainNewsHeaderCollectionReusableView: UICollectionReusableView {
         
         return $0
     }(UILabel())
-//    private lazy var headerButton: UIButton = {
-//        $0.setImage(UIImage(systemName: "newspaper"), for: .normal)
-//        $0.tintColor = .black
-//        
-//        return $0
-//    }(UIButton())
     private lazy var headerButton: UIButton = AppElements.createButton(setImage: "newspaper", color: .black, action: readNews)
     
     func setupHeader(header: String) {

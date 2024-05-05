@@ -10,9 +10,12 @@ import UIKit
 class MainUsersHeaderCollectionReusableView: UICollectionReusableView {
     static let reuseId = "MainUsersHeaderCollectionReusableView"
     
-    lazy private var readNews = UIAction { [weak self] action in
-        print("read")
+    var block: ( () -> Void)?
+    
+    lazy private var readNews = UIAction { [weak self] _ in
+        self?.block?()
     }
+    
     private lazy var headerStack: UIStackView = {
         .config(view: $0) { headerStack in
             headerStack.axis = .horizontal

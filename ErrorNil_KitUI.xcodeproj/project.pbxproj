@@ -40,6 +40,10 @@
 		F8124EBA2BE785C100676CCA /* MainEventsHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8124EB92BE785C100676CCA /* MainEventsHeaderCollectionReusableView.swift */; };
 		F8124EBC2BE79A8A00676CCA /* MainNewsFooterCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8124EBB2BE79A8A00676CCA /* MainNewsFooterCollectionReusableView.swift */; };
 		F8124EBE2BE7ADEA00676CCA /* MainUsersHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8124EBD2BE7ADEA00676CCA /* MainUsersHeaderCollectionReusableView.swift */; };
+		F8124EC02BE7B60300676CCA /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8124EBF2BE7B60300676CCA /* TabBarViewController.swift */; };
+		F8124EC32BE7B8E000676CCA /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8124EC22BE7B8E000676CCA /* MessagesViewController.swift */; };
+		F8124EC52BE7BC0B00676CCA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8124EC42BE7BC0B00676CCA /* ProfileViewController.swift */; };
+		F8124EC82BE7BDF100676CCA /* TabBarElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8124EC72BE7BDF100676CCA /* TabBarElements.swift */; };
 		F83205DF2BBB29EB005DB3C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83205DE2BBB29EB005DB3C3 /* AppDelegate.swift */; };
 		F83205E12BBB29EB005DB3C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83205E02BBB29EB005DB3C3 /* SceneDelegate.swift */; };
 		F83205E32BBB29EB005DB3C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83205E22BBB29EB005DB3C3 /* ViewController.swift */; };
@@ -145,6 +149,10 @@
 		F8124EB92BE785C100676CCA /* MainEventsHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainEventsHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		F8124EBB2BE79A8A00676CCA /* MainNewsFooterCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNewsFooterCollectionReusableView.swift; sourceTree = "<group>"; };
 		F8124EBD2BE7ADEA00676CCA /* MainUsersHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUsersHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		F8124EBF2BE7B60300676CCA /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		F8124EC22BE7B8E000676CCA /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		F8124EC42BE7BC0B00676CCA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F8124EC72BE7BDF100676CCA /* TabBarElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarElements.swift; sourceTree = "<group>"; };
 		F83205DC2BBB29EB005DB3C3 /* ErrorNil_UIKit_HW_2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ErrorNil_UIKit_HW_2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F83205DE2BBB29EB005DB3C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F83205E02BBB29EB005DB3C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -375,17 +383,18 @@
 		F8124E8F2BE2D8DA00676CCA /* ErrorNil_UIKit_HW11 */ = {
 			isa = PBXGroup;
 			children = (
+				F8124EC62BE7BDC300676CCA /* Elements */,
+				F8124EC12BE7B88500676CCA /* ViewControllers */,
 				F8124EB02BE3565B00676CCA /* MyExtension */,
 				F8124EA92BE2E6F900676CCA /* Cells */,
 				F8124EA22BE2DC6700676CCA /* Model */,
 				F8124E902BE2D8DA00676CCA /* AppDelegate.swift */,
 				F8124E922BE2D8DA00676CCA /* SceneDelegate.swift */,
-				F8124E942BE2D8DA00676CCA /* ViewController.swift */,
 				F8124E992BE2D8DC00676CCA /* Assets.xcassets */,
 				F8124E9B2BE2D8DC00676CCA /* LaunchScreen.storyboard */,
 				F8124E9E2BE2D8DC00676CCA /* Info.plist */,
 				F8124EAC2BE2E7B400676CCA /* Protocols.swift */,
-				F8124EAE2BE2E94100676CCA /* AppElements.swift */,
+				F8124EBF2BE7B60300676CCA /* TabBarViewController.swift */,
 			);
 			path = ErrorNil_UIKit_HW11;
 			sourceTree = "<group>";
@@ -419,6 +428,25 @@
 				F8124EB12BE3568000676CCA /* UIView.ext.swift */,
 			);
 			path = MyExtension;
+			sourceTree = "<group>";
+		};
+		F8124EC12BE7B88500676CCA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F8124E942BE2D8DA00676CCA /* ViewController.swift */,
+				F8124EC22BE7B8E000676CCA /* MessagesViewController.swift */,
+				F8124EC42BE7BC0B00676CCA /* ProfileViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F8124EC62BE7BDC300676CCA /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				F8124EAE2BE2E94100676CCA /* AppElements.swift */,
+				F8124EC72BE7BDF100676CCA /* TabBarElements.swift */,
+			);
+			path = Elements;
 			sourceTree = "<group>";
 		};
 		F83205DD2BBB29EB005DB3C3 /* ErrorNil_UIKit_HW_2 */ = {
@@ -1042,10 +1070,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8124EC02BE7B60300676CCA /* TabBarViewController.swift in Sources */,
 				F8124EA62BE2DDA300676CCA /* SectionCollections.swift in Sources */,
 				F8124EAB2BE2E75000676CCA /* NewsCollectionViewCell.swift in Sources */,
+				F8124EC32BE7B8E000676CCA /* MessagesViewController.swift in Sources */,
+				F8124EC82BE7BDF100676CCA /* TabBarElements.swift in Sources */,
 				F8124EB22BE3568000676CCA /* UIView.ext.swift in Sources */,
 				F8124EBA2BE785C100676CCA /* MainEventsHeaderCollectionReusableView.swift in Sources */,
+				F8124EC52BE7BC0B00676CCA /* ProfileViewController.swift in Sources */,
 				F8124EB42BE4AD3700676CCA /* EventsCollectionViewCell.swift in Sources */,
 				F8124EBE2BE7ADEA00676CCA /* MainUsersHeaderCollectionReusableView.swift in Sources */,
 				F8124EAF2BE2E94100676CCA /* AppElements.swift in Sources */,
