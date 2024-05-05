@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import LoremSwiftum
+
 
 
 class ViewController: UIViewController {
@@ -16,11 +18,32 @@ class ViewController: UIViewController {
         $0.register(NewsCollectionViewCell.self, forCellWithReuseIdentifier: NewsCollectionViewCell.reuseID)
         $0.register(EventsCollectionViewCell.self, forCellWithReuseIdentifier: EventsCollectionViewCell.reuseID)
         $0.register(UsersCollectionViewCell.self, forCellWithReuseIdentifier: UsersCollectionViewCell.reuseID)
+        $0.register(
+            MainNewsHeaderCollectionReusableView.self,
+            forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+            withReuseIdentifier: MainNewsHeaderCollectionReusableView.reuseId
+        )
+        $0.register(
+            MainNewsFooterCollectionReusableView.self,
+            forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter,
+            withReuseIdentifier: MainNewsFooterCollectionReusableView.reuseId
+        )
+        $0.register(
+            MainEventsHeaderCollectionReusableView.self,
+            forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+            withReuseIdentifier: MainEventsHeaderCollectionReusableView.reuseId
+        )
+        $0.register(
+            MainUsersHeaderCollectionReusableView.self,
+            forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+            withReuseIdentifier: MainUsersHeaderCollectionReusableView.reuseId
+        )
         $0.backgroundColor = .appColorViewGray
+        $0.delegate = self
         
         return $0
     }(UICollectionView(frame: view.frame, collectionViewLayout: createLayout()))
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -53,7 +76,8 @@ class ViewController: UIViewController {
         
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .continuous
-        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 30, bottom: 139, trailing: 10)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 16, leading: 30, bottom: 11, trailing: 10)
+        section.boundarySupplementaryItems = [self.createHeaderNewsSize(), self.createFooterSize()]
         
         return section
     }
@@ -71,7 +95,9 @@ class ViewController: UIViewController {
         
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .groupPaging
-        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 30, bottom: 98, trailing: 15)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 16, leading: 30, bottom: 61, trailing: 15)
+        section.boundarySupplementaryItems = [self.createHeaderNewsSize()]
+        
         
         return section
     }
@@ -88,9 +114,31 @@ class ViewController: UIViewController {
         
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .groupPagingCentered
-        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 30, bottom: 0, trailing: 10)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 16, leading: 30, bottom: 0, trailing: 10)
+        section.boundarySupplementaryItems = [self.createHeaderNewsSize()]
         
         return section
+    }
+    
+    private func createHeaderNewsSize() -> NSCollectionLayoutBoundarySupplementaryItem {
+        .init(
+            layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(24)),
+            elementKind: UICollectionView.elementKindSectionHeader,
+            alignment: .top
+        )
+    }
+    
+    private func createFooterSize() -> NSCollectionLayoutBoundarySupplementaryItem {
+        let footer = NSCollectionLayoutBoundarySupplementaryItem (
+            layoutSize: NSCollectionLayoutSize(
+                widthDimension: .fractionalWidth(1),
+                heightDimension: .absolute(28)),
+            elementKind: UICollectionView.elementKindSectionFooter,
+            alignment: .bottom
+        )
+        footer.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: -61, trailing: 0)
+        
+        return footer
     }
 }
 
@@ -134,6 +182,71 @@ extension ViewController: UICollectionViewDataSource {
                 return cell
             default:
                 return UICollectionViewCell()
+        }
+    }
+}
+
+
+extension ViewController: UICollectionViewDelegate {
+    func collectionView(
+        _ collectionView: UICollectionView,
+        viewForSupplementaryElementOfKind kind: String,
+        at indexPath: IndexPath
+    ) -> UICollectionReusableView {
+        let item = collectionData[indexPath.section]
+        
+        switch indexPath.section {
+            case 0:
+                switch kind {
+                    case UICollectionView.elementKindSectionHeader:
+                        let header = collectionView.dequeueReusableSupplementaryView(
+                            ofKind: kind,
+                            withReuseIdentifier: MainNewsHeaderCollectionReusableView.reuseId,
+                            for: indexPath
+                        ) as! MainNewsHeaderCollectionReusableView
+                        header.setupHeader(header: item.header)
+                        
+                        return header
+                    case UICollectionView.elementKindSectionFooter:
+                        let footer = collectionView.dequeueReusableSupplementaryView(
+                            ofKind: kind,
+                            withReuseIdentifier: MainNewsFooterCollectionReusableView.reuseId,
+                            for: indexPath
+                        ) as! MainNewsFooterCollectionReusableView
+                        footer.setupFooter(footer: Lorem.sentence)
+                        
+                        return footer
+                    default:
+                        return UICollectionReusableView()
+                }
+            case 1:
+                switch kind {
+                    case UICollectionView.elementKindSectionHeader:
+                        let header = collectionView.dequeueReusableSupplementaryView(
+                            ofKind: kind,
+                            withReuseIdentifier: MainEventsHeaderCollectionReusableView.reuseId,
+                            for: indexPath
+                        ) as! MainEventsHeaderCollectionReusableView
+                        header.setupHeader(header: item.header)
+                        
+                        return header
+                    default:
+                        return UICollectionReusableView()
+                }
+            default :
+                switch kind {
+                    case UICollectionView.elementKindSectionHeader:
+                        let header = collectionView.dequeueReusableSupplementaryView(
+                            ofKind: kind,
+                            withReuseIdentifier: MainUsersHeaderCollectionReusableView.reuseId,
+                            for: indexPath
+                        ) as! MainUsersHeaderCollectionReusableView
+                        header.setupHeader(header: item.header)
+                        
+                        return header
+                    default:
+                        return UICollectionReusableView()
+                }
         }
     }
 }

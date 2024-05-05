@@ -79,9 +79,9 @@ struct SectionCollections: Identifiable {
             ItemCollection(image: "kristaps-ungurs-MgfD_22Hfj8-unsplash", text: Lorem.sentence, userName: Lorem.fullName),
             ItemCollection(image: "point-normal-mLFyaVdRdpE-unsplash", text: Lorem.sentence, userName: Lorem.fullName),
         ]
-        let newsSection = SectionCollections(header: "News", items: newsItems)
-        let eventsSection = SectionCollections(header: "Events", items: eventsItems)
-        let usersSection = SectionCollections(header: "Users", items: usersItems)
+        let newsSection = SectionCollections(header: "Новости", items: newsItems)
+        let eventsSection = SectionCollections(header: "События", items: eventsItems)
+        let usersSection = SectionCollections(header: "Пользователи", items: usersItems)
         
         return [newsSection, eventsSection, usersSection]
     }
