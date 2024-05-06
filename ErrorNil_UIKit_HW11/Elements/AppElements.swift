@@ -49,3 +49,11 @@ class AppElements {
         }(UIButton(type: .system, primaryAction: action))
     }
 }
+
+class CustomNavigationController: UINavigationController {
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    navigationBar.prefersLargeTitles = true // Enable large titles (optional)
+    navigationBar.topItem?.title = "Your App Name" // Set title here
+  }
+}

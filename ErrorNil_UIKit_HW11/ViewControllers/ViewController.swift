@@ -13,6 +13,8 @@ import LoremSwiftum
 class ViewController: UIViewController {
     private let collectionData = SectionCollections.mocData()
     
+    var tabBarViewController: TabBarViewController?
+    
     lazy var collectionView: UICollectionView = {
         $0.dataSource = self
         $0.register(NewsCollectionViewCell.self, forCellWithReuseIdentifier: NewsCollectionViewCell.reuseID)
@@ -48,6 +50,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         view.addSubview(collectionView)
+        
+        if let tabBarVC = self.tabBarController as? TabBarViewController {
+            tabBarVC.passcollectionDataToMessagesViewController(data: collectionData)
+        }
     }
     
     private func createLayout() -> UICollectionViewCompositionalLayout {
