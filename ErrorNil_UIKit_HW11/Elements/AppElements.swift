@@ -38,13 +38,14 @@ class AppElements {
         }(UILabel())
     }
     
-    static func createButton(setImage: String? = nil, title: String? = nil, color: UIColor = .black, titleAlignment: UIControl.ContentHorizontalAlignment = .center, action: UIAction) -> UIButton {
+    static func createButton(setImage: String? = nil, title: String? = nil, color: UIColor = .black, titleAlignment: UIControl.ContentHorizontalAlignment = .center, action: UIAction, corner: CGFloat = 0) -> UIButton {
         {
             .config(view: $0) { setupButton in
                 setupButton.setImage(UIImage(systemName: setImage ?? ""), for: .normal)
                 setupButton.setTitle(title, for: .normal)
                 setupButton.tintColor = color
                 setupButton.contentHorizontalAlignment = titleAlignment
+                setupButton.layer.cornerRadius = corner
             }
         }(UIButton(type: .system, primaryAction: action))
     }

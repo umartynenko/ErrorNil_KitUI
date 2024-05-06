@@ -57,6 +57,6 @@ class TabBarViewController: UITabBarController {
         self.userData = data.last?.items ?? []
         passDataToMessagesViewController(data: userData)
         self.messagesViewController?.tabBarItem.badgeValue = String(userData.count)
-//        print(self.userData)
+        print(self.userData)
     }
 }

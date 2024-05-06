@@ -119,7 +119,7 @@ class ViewController: UIViewController {
         
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .groupPagingCentered
-        section.contentInsets = NSDirectionalEdgeInsets(top: 16, leading: 30, bottom: 0, trailing: 10)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 16, leading: 30, bottom: 24, trailing: 10)
         section.boundarySupplementaryItems = [self.createHeaderNewsSize()]
         
         return section
