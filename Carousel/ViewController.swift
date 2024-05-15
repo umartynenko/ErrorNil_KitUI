@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDelegate {
+class ViewController: UIViewController {
     var collectionView: UICollectionView!
     
     let images = [
@@ -24,7 +24,7 @@ class ViewController: UIViewController, UICollectionViewDelegate {
         "The solidified lava flows of the Fagradalsfjall volcano near Grindavik, Iceland",
         "Sengan-en in Kagoshima, Japan. October 2023."
     ]
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,7 +35,7 @@ class ViewController: UIViewController, UICollectionViewDelegate {
         layout.minimumLineSpacing = 30
         layout.minimumInteritemSpacing = 0
         layout.sectionInset = UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30)
-
+        
         
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -70,27 +70,30 @@ extension ViewController: UICollectionViewDataSource {
 }
 
 extension ViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        guard let layout = collectionViewLayout as? UICollectionViewFlowLayout else {
-                    return CGSize.zero
-                }
+    func collectionView(
+        _ collectionView: UICollectionView,
+        layout collectionViewLayout: UICollectionViewLayout,
+        sizeForItemAt indexPath: IndexPath
+    ) -> CGSize {
+        guard let layout = collectionViewLayout as? UICollectionViewFlowLayout else { return CGSize.zero }
         
         let width: CGFloat = 200
         let height: CGFloat = collectionView.bounds.height - layout.sectionInset.top - layout.sectionInset.bottom
-
+        
         return CGSize(width: width, height: height)
     }
     
-    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        // реализован эффект параллакса для ячеек: при прокрутке изменяется масштаб изображения и заголовка ячейки
-        // в зависимости от их позиции относительно центра scrollView.
-        let centerX = scrollView.contentOffset.x + (scrollView.frame.size.width / 2)
-        
+        // перебираем все видимые ячейки
         for cell in collectionView.visibleCells as! [ImageCell] {
-            let basePosition = cell.center.x - centerX
-            let scale = min(max(1 - abs(basePosition / scrollView.frame.size.width), 0.75), 1.0)
-            cell.setScale(scale)
+            // расчет сещения ячейки относительно центра экрана
+            let centerX = scrollView.contentOffset.x + (scrollView.frame.size.width / 2)    // вычисленную центральную позицию Cell
+            let basePosition = cell.center.x - centerX  // положение Cell к центру
+            let offset = abs(basePosition) / scrollView.frame.size.width
+            let alpha = 1 - min(max(offset, 0.2), 0.8)  // прозрачность текста
+            
+            cell.titleLabel.alpha = alpha   // Устанавливается непрозрачность подписи
+            cell.setScale(min(max(1 - offset, 0.75), 1.0))  // Устанавливается масштаб ячейки
         }
     }
 }
@@ -124,7 +127,7 @@ class ImageCell: UICollectionViewCell {
             imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             imageView.heightAnchor.constraint(lessThanOrEqualTo: contentView.heightAnchor, multiplier: 0.8),
-
+            
             titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor),
             titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
