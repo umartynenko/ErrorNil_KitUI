@@ -1,3 +1,10 @@
+//
+//  ViewController.swift
+//  Carousel
+//
+//  Created by Юрий Мартыненко on 15.05.2024.
+//
+
 import UIKit
 
 class ViewController: UIViewController, UICollectionViewDelegate {
