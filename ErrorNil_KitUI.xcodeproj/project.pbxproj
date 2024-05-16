@@ -75,6 +75,8 @@
 		F8985A132BF5418E004C6896 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8985A122BF5418E004C6896 /* ViewController.swift */; };
 		F8985A182BF5418F004C6896 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8985A172BF5418F004C6896 /* Assets.xcassets */; };
 		F8985A1B2BF5418F004C6896 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = F8985A1A2BF5418F004C6896 /* Base */; };
+		F8985A242BF69233004C6896 /* CarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8985A232BF69233004C6896 /* CarouselCell.swift */; };
+		F8985A262BF696C7004C6896 /* ParalaxFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8985A252BF696C7004C6896 /* ParalaxFlowLayout.swift */; };
 		F8BC6F332BCBC229009DBCBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BC6F322BCBC229009DBCBC /* AppDelegate.swift */; };
 		F8BC6F352BCBC229009DBCBC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BC6F342BCBC229009DBCBC /* SceneDelegate.swift */; };
 		F8BC6F372BCBC229009DBCBC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BC6F362BCBC229009DBCBC /* ViewController.swift */; };
@@ -198,6 +200,8 @@
 		F8985A172BF5418F004C6896 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8985A1A2BF5418F004C6896 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8985A1C2BF5418F004C6896 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8985A232BF69233004C6896 /* CarouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCell.swift; sourceTree = "<group>"; };
+		F8985A252BF696C7004C6896 /* ParalaxFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParalaxFlowLayout.swift; sourceTree = "<group>"; };
 		F8BC6F302BCBC229009DBCBC /* ErrorNil_UIKit_HW_6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ErrorNil_UIKit_HW_6.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8BC6F322BCBC229009DBCBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8BC6F342BCBC229009DBCBC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -538,14 +542,24 @@
 		F8985A0D2BF5418E004C6896 /* Carousel */ = {
 			isa = PBXGroup;
 			children = (
+				F8985A222BF6918A004C6896 /* Cell */,
 				F8985A0E2BF5418E004C6896 /* AppDelegate.swift */,
 				F8985A102BF5418E004C6896 /* SceneDelegate.swift */,
 				F8985A122BF5418E004C6896 /* ViewController.swift */,
 				F8985A172BF5418F004C6896 /* Assets.xcassets */,
 				F8985A192BF5418F004C6896 /* LaunchScreen.storyboard */,
 				F8985A1C2BF5418F004C6896 /* Info.plist */,
+				F8985A252BF696C7004C6896 /* ParalaxFlowLayout.swift */,
 			);
 			path = Carousel;
+			sourceTree = "<group>";
+		};
+		F8985A222BF6918A004C6896 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F8985A232BF69233004C6896 /* CarouselCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		F8BC6F312BCBC229009DBCBC /* ErrorNil_UIKit_HW_6 */ = {
@@ -1207,8 +1221,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8985A132BF5418E004C6896 /* ViewController.swift in Sources */,
+				F8985A262BF696C7004C6896 /* ParalaxFlowLayout.swift in Sources */,
 				F8985A0F2BF5418E004C6896 /* AppDelegate.swift in Sources */,
 				F8985A112BF5418E004C6896 /* SceneDelegate.swift in Sources */,
+				F8985A242BF69233004C6896 /* CarouselCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
