@@ -80,7 +80,7 @@ class ViewController: UIViewController {
         group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 25)
         
         let section = NSCollectionLayoutSection(group: group)
-        section.orthogonalScrollingBehavior = .continuous
+        section.orthogonalScrollingBehavior = .groupPagingCentered
         section.contentInsets = NSDirectionalEdgeInsets(top: 16, leading: 30, bottom: 11, trailing: 10)
         section.boundarySupplementaryItems = [self.createHeaderNewsSize(), self.createFooterSize()]
         
